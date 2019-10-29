@@ -1,2 +1,2 @@
 # gpu-burn
-Multi-GPU CUDA stress test
+Docker image for the Multi-GPU CUDA stress test from http://wili.cc/blog/gpu-burn.html
