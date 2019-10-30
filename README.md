@@ -1,7 +1,7 @@
 # gpu-burn
 Docker image for the Multi-GPU CUDA stress test from http://wili.cc/blog/gpu-burn.html
 
-## USAGE
+## Usage
 
 Below commands assume that you have the appropriate version of the [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-docker) installed.
 
