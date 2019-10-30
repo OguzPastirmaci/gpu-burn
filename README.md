@@ -8,8 +8,12 @@ Below commands assume that you have the appropriate version of the [NVIDIA Conta
 Default test duration is 10 seconds. If needed, change <test duration> to a different value.
 
 ### Docker 19.03 and later
-`docker run --gpus all --rm oguzpastirmaci/gpu-burn <test duration>`
+```zsh
+docker run --gpus all --rm oguzpastirmaci/gpu-burn <test duration>
+```
 
 ### Previous versions of Docker
 
-`nvidia-docker run --rm oguzpastirmaci/gpu-burn <test duration>`
+```zsh
+nvidia-docker run --rm oguzpastirmaci/gpu-burn <test duration>
+```
