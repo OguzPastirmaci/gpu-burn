@@ -5,7 +5,7 @@ Docker image for the Multi-GPU CUDA stress test from http://wili.cc/blog/gpu-bur
 
 Below commands assume that you have the appropriate version of the [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-docker) installed.
 
-Default test duration is 10 seconds. If needed, change <test duration> to a different value.
+Default test duration is 60 seconds. If needed, change <test duration> to a different value.
 
 #### Docker 19.03 and later
 ```zsh
