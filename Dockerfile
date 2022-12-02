@@ -13,4 +13,6 @@ COPY --from=builder /build/compare.ptx /app/
 
 WORKDIR /app
 
-CMD ["./gpu_burn", "60"]
+ENTRYPOINT ["./gpu_burn"]
+
+CMD [ "60" ]
