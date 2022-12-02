@@ -9,11 +9,11 @@ Default test duration is 10 seconds. If needed, change <test duration> to a diff
 
 #### Docker 19.03 and later
 ```zsh
-docker run --gpus all --rm oguzpastirmaci/gpu-burn <test duration>
+docker run --gpus all --rm oguzpastirmaci/gpu-burn <test duration in seconds>
 ```
 
 #### Previous versions of Docker
 
 ```zsh
-nvidia-docker run --rm oguzpastirmaci/gpu-burn <test duration>
+nvidia-docker run --rm oguzpastirmaci/gpu-burn <test duration in seconds>
 ```
