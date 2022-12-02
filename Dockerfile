@@ -1,14 +1,16 @@
-FROM nvidia/cuda:9.0-devel
+FROM nvidia/cuda:11.1.1-devel AS builder
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-    wget \
-    && rm -rf /var/lib/apt/lists/*
+WORKDIR /build
 
-WORKDIR /root
-RUN wget http://wili.cc/blog/entries/gpu-burn/gpu_burn-1.0.tar.gz \
-    && tar xzf gpu_burn-1.0.tar.gz \
-    && make
+COPY . /build/
 
-ENTRYPOINT [ "/root/gpu_burn" ]
-CMD [ "10" ]
+RUN make
+
+FROM nvidia/cuda:11.1.1-runtime
+
+COPY --from=builder /build/gpu_burn /app/
+COPY --from=builder /build/compare.ptx /app/
+
+WORKDIR /app
+
+CMD ["./gpu_burn", "60"]
